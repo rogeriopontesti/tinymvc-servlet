@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>app.classes.Main</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>inovacaoti.pge@angra.gov.br</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>DOMAIN</param-name>
+        <param-value>http://localhost:8080/tinymvc</param-value>
+    </context-param>
+    <listener>
+        <listener-class>app.classes.AppContextListener</listener-class>
+    </listener>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
